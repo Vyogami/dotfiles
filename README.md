@@ -49,6 +49,7 @@ To use these dotfiles, follow these steps:
     ```bash
     dotter deploy
     ```
+
     > use `-f` flag to forcefully deploy
 
     This command will deploy the dotfiles to their respective target locations, based on the configurations defined in the `.dotter` directory.
