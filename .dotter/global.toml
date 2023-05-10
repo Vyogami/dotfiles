@@ -20,15 +20,9 @@ depends = []
 "git/.gitconfig" = "~/.gitconfig"
 "git/.gitmessage" = "~/.gitmessage"
 
-[git.variables]
-git_name = "legitShivam"
-git_email = "shiv.05cs@gmail.com"
-gpg_key_id = "161F3104F42157B553E50006F6AF18320BA07F1E"
-gpg_binary = "/usr/bin/gpg"
-
 [gnome-shell.files]
 "gnome-shell/.themes" = "~/.themes"
-"gnome-shell/extensions" = "~/.local/share/gnome-shell/extensions"
+"gnome-shell/extensions" = {target = "~/.local/share/gnome-shell/extensions", type = "symbolic"}
 
 [grub.files]
 "grub/themes" = "/boot/grub/themes"
