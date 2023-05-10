@@ -3,6 +3,48 @@
 [default]
 depends = []
 
-[default.files]
+[bash.files]
+"bash/.bashrc" = "~/.bashrc"
+#"bash/.bash_profile" = "~/.bash_profile"
 
-[default.variables]
+[fish.files]
+"fish/completions" = "~/.config/fish/completions"
+"fish/conf.d" = "~/.config/fish/conf.d"
+"fish/functions" = {target = "~/.config/fish/functions", type = "symbolic" }
+"fish/themes" = "~/.config/fish/themes"
+"fish/config.fish" = "~/.config/fish/config.fish"
+"fish/fish_plugins" = "~/.config/fish/fish_plugins"
+"fish/fish_variables" = "~/.config/fish/fish_variables"
+
+[git.files]
+"git/.gitconfig" = "~/.gitconfig"
+"git/.gitmessage" = "~/.gitmessage"
+
+[git.variables]
+git_name = "legitShivam"
+git_email = "shiv.05cs@gmail.com"
+gpg_key_id = "161F3104F42157B553E50006F6AF18320BA07F1E"
+gpg_binary = "/usr/bin/gpg"
+
+[gnome-shell.files]
+"gnome-shell/.themes" = "~/.themes"
+"gnome-shell/extensions" = "~/.local/share/gnome-shell/extensions"
+
+[grub.files]
+"grub/themes" = "/boot/grub/themes"
+#"grub/grub" = "/etc/default/grub"
+
+[kitty.files]
+"kitty/themes" = {target = "~/.config/kitty/themes", type = "symbolic"}
+"kitty/kitty.conf" = { target = "~/.config/kitty/kitty.conf", type = "symbolic" }
+
+[neofetch.files]
+"neofetch/config.conf" = "~/.config/neofetch/config.conf"
+
+[neovim.files]
+"neovim/lua" = "~/.config/nvim/lua"
+"neovim/init.lua" = "~/.config/nvim/init.lua"
+"neovim/lazy-lock.json" = "~/.config/nvim/lazy-lock.json"
+
+[zsh.files]
+"zsh/.zshrc" = "~/.zshrc"
