@@ -35,7 +35,7 @@
     ui = true
 [commit]
 	template = ~/.gitmessage
-  gpgsign = true
+  gpgsign = false
 [pull]
 	rebase = true
 [init]
