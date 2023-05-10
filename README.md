@@ -17,7 +17,7 @@ This repository contains the dotfile configurations for the following tools:
 - Git: `.gitconfig` and `.gitmessage`
 - Gnome Shell: `extensions`, `extensions-settings.ini`, `gnome-settings.ini`, and `.themes`
 
-    > for more refer to gnome-shell [documentation](./gnome-shell/README)
+     > for more refer to gnome-shell [documentation](./gnome-shell/README)
 
 - Grub: `grub` and `themes`
 - Kitty: `kitty.conf` and `themes`
@@ -32,29 +32,37 @@ To use these dotfiles, follow these steps:
 
 1. Clone this repository to your local machine:
 
-    ```bash
-    git clone --recursive https://github.com/your-username/dotfiles.git
-    ```
+     ```bash
+     git clone --recursive https://github.com/your-username/dotfiles.git
+     ```
 
-2. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
+1. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
 
-3. Change to the dotfiles directory:
+1. Change to the dotfiles directory:
 
-    ```bash
-    cd dotfiles
-    ```
+     ```bash
+     cd dotfiles
+     ```
 
-4. Deploy the dotfiles using Dotter:
+1. Create `local.toml` using default config corresponding to your OS.
+    - **Linux**: linux.toml
+    - **Windows**: windows.toml
 
-    ```bash
-    dotter deploy
-    ```
+     ```bash
+     cp .dotter/<os>.toml local.toml
+     ```
 
-    > use `-f` flag to forcefully deploy
+1. Deploy the dotfiles using Dotter:
 
-    This command will deploy the dotfiles to their respective target locations, based on the configurations defined in the `.dotter` directory.
+     ```bash
+     dotter deploy
+     ```
 
-5. Customize the dotfiles according to your preferences. Feel free to modify or add any configuration files to suit your needs.
+     > use `-f` flag to forcefully deploy
+
+     This command will deploy the dotfiles to their respective target locations, based on the configurations defined in the `.dotter` directory.
+
+1. Customize the dotfiles according to your preferences. Feel free to modify or add any configuration files to suit your needs.
 
 ## Contributing
 
