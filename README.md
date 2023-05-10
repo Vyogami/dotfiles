@@ -2,6 +2,8 @@
 
 This repository contains my personal dotfiles, which are the configuration files for various operating systems and tools. I manage these dotfiles using the [Dotter](https://github.com/SuperCuber/dotter), a dotfile manager and templater written in Rust.
 
+![codereaper-theme](./assets/codereaper-desktop-min.png)
+
 ## Introduction
 
 Dotfiles are configuration files that customize the behavior and appearance of software applications and operating systems. This repository serves as a centralized location for storing and version-controlling my dotfiles, making it easy to synchronize them across different machines and operating systems.
