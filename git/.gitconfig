@@ -26,9 +26,11 @@
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = {{ git_name }}
-	email = {{ git_email }}
-	signingkey = {{ gpg_key_id }}
+	name = "legitShivam"
+	email = "shiv.05cs@gmail.com"
+	signingkey = "161F3104F42157B553E50006F6AF18320BA07F1E"
+[gpg]
+	program = "/usr/bin/gpg"
 [color]
     ui = true
 [commit]
