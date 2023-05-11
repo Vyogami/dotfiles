@@ -19,9 +19,10 @@ This repository contains the dotfile configurations for the following tools:
 - Git: `.gitconfig` and `.gitmessage`
 - Gnome Shell: `extensions`, `extensions-settings.ini`, `gnome-settings.ini`, and `.themes`
 
-     > for more refer to gnome-shell [documentation](https://github.com/legitShivam/gnome-shell-configs/blob/main/README.md)
+     > It is not managed by dotter! for more refer to gnome-shell [documentation](https://github.com/legitShivam/gnome-shell-configs/blob/main/README.md)
 
 - Grub: `grub` and `themes`
+    > [deprecated] it is not managed by dotter
 - Kitty: `kitty.conf` and `themes`
 - Neofetch: `config.conf`
 - Neovim:
