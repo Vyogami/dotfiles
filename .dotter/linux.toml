@@ -7,8 +7,6 @@ packages = [
     "bash",
     "fish",
     "git",
-    "gnome-shell",
-    "grub",
     "kitty",
     "neofetch",
     "neovim",

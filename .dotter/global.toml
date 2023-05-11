@@ -25,7 +25,7 @@ depends = []
 
 [grub.files]
 "grub/themes" = "/boot/grub/themes"
-#"grub/grub" = "/etc/default/grub"
+"grub/grub" = "/etc/default/grub"
 
 [kitty.files]
 "kitty/themes" = {target = "~/.config/kitty/themes", type = "symbolic"}
