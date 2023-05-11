@@ -21,6 +21,8 @@ depends = []
 
 [gnome-shell.files]
 "gnome-shell/.themes" = "~/.themes"
+
+[gnome-shell-extensions.files]
 "gnome-shell/extensions" = {target = "~/.local/share/gnome-shell/extensions", type = "symbolic"}
 
 [grub.files]
