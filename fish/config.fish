@@ -15,10 +15,10 @@ set --global tide_right_prompt_items status java virtual_env node vi_mode
 
 
 # ls configurations
-alias l='ls'
-function ls
-   nu -c "ls $argv[1..-1]"
-end
+#alias l='ls'
+#function ls
+#   nu -c "ls $argv[1..-1]"
+#end
 
 # Run any command in nu shell
 function nuc
