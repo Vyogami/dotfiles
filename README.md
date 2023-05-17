@@ -39,13 +39,23 @@ To use these dotfiles, follow these steps:
      git clone --recursive https://github.com/your-username/dotfiles.git
      ```
 
-1. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
-
 1. Change to the dotfiles directory:
 
      ```bash
      cd dotfiles
      ```
+
+
+1. Execute the setup scripts
+   > **Note**: Execute setup scripts before deploying configurations.
+
+   - zsh setup script:
+
+     ```shell
+     ./zsh-setup.sh
+     ```
+
+1. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
 
 1. Create `local.toml` using default config corresponding to your OS.
     - **Linux**: linux.toml
