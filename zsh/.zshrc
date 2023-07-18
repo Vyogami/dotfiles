@@ -78,7 +78,22 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo history zsh-autosuggestions fzf zsh-syntax-highlighting nvm poetry)
+plugins=(
+git
+sudo
+history
+zsh-autosuggestions
+fzf
+zsh-syntax-highlighting
+nvm
+poetry
+yarn
+web-search
+rake
+last-working-dir
+bundler
+dotenv
+extract)
 
 
 ZSH_DISABLE_COMPFIX=true
@@ -205,3 +220,11 @@ unset __conda_setup
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+
+# pnpm
+export PNPM_HOME="/home/codereaper/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
