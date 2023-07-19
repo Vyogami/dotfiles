@@ -1,3 +1,6 @@
 [submodule "gnome-shell"]
 	path = gnome-shell
 	url = https://github.com/legitshivam/gnome-shell-configs
+[submodule "kitty/themes"]
+	path = kitty/themes
+	url = https://github.com/dexpota/kitty-themes
