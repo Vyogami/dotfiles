@@ -30,7 +30,7 @@ depends = []
 "grub/grub" = "/etc/default/grub"
 
 [kitty.files]
-"kitty/themes" = {target = "~/.config/kitty/themes", type = "symbolic"}
+"kitty/kitty-themes/themes" = {target = "~/.config/kitty/themes", type = "symbolic"}
 "kitty/kitty.conf" = { target = "~/.config/kitty/kitty.conf", type = "symbolic" }
 
 [neofetch.files]
