@@ -153,11 +153,6 @@ alias lrl='exa --icons -a -T -l'
 alias lh='exa --icons -h'
 
 
-# Ruby configuration
-# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-# export PATH="$PATH:$GEM_HOME/bin"
-
-
 # yay config
 alias search="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | \"{print \$2}\")' | xargs -ro yay -S" 
 
