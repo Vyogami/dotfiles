@@ -1,3 +1,3 @@
 local M = {}
- M.ui = {theme = 'onenord'}
+ M.ui = {theme = 'ayu_dark'}
  return M
