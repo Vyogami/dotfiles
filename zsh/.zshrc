@@ -1,4 +1,5 @@
 # Fig pre block. Keep at the top of this file.
+
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -132,6 +133,8 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 ################################ Custom configuration ################################
 
+# Pokemon
+pokemon-colorscripts -r --no-title
 
 # exa ls configurations
 alias l='exa --icons'
@@ -223,3 +226,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
