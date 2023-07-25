@@ -1,8 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.pre.bash"
-[[ $- == *i* ]] &&
-  source "$HOME/.local/share/blesh/ble.sh" --attach=none
-
 # vi mode
 if [[ $- == *i* ]]; then # in interactive session
   bind 'set editing-mode vi'
@@ -56,9 +51,6 @@ alias lrl='exa --icons -a -T -l'
 alias lh='exa --icons -h'
 
 
-# oh-my-posh configs
-eval "$(oh-my-posh init bash)"
-
 
 [[ ${BLE_VERSION-} ]] && ble-attach
 
@@ -78,8 +70,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bashrc.post.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.post.bash"
+# Starship config
+eval "$(starship init bash)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
