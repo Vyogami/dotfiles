@@ -12,7 +12,8 @@ packages = [
     "neovim",
     "zsh",
     "nushell",
-    "powershell-linux"
+    "powershell-linux",
+    "starship"
 ]
 
 [files]

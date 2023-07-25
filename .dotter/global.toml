@@ -49,3 +49,6 @@ depends = []
 
 [powershell-linux.files]
 "powershell" = "~/.config/powershell"
+
+[starship.files]
+"starship/starship.toml" = "~/.config/starship.toml"
