@@ -26,12 +26,25 @@ function nuc
 end
 
 
-alias la='ls -a'
-alias ld='la -D'
-alias lsa='ls -la'
-alias lh='ls -h'
-alias lf='ls -f'
-alias ldl='la -D -l'
+# exa ls configurations
+alias l='exa --icons'
+# alias l='exa -ons'
+alias ls='exa --icons'
+alias la='exa --icons -a'
+alias lf='exa --icons -a -F'
+alias ld='exa --icons -a -d'
+alias lt='exa --icons -a -T'
+alias lr='exa --icons -a -r'
+
+alias ll='exa --icons -1'
+alias lfl='exa --icons -a -F -l'
+alias lla='exa --icons -a -1'
+alias ldl='exa --icons -a -d -l'
+alias ltl='exa --icons -a -T -l'
+alias lrl='exa --icons -a -T -l'
+
+alias lh='exa --icons -h'
+alias lsa='ls -lah'
 
 
 # yay config
@@ -72,3 +85,7 @@ alias gitprune="git gc --prune=now"
 
 # Starship config
 starship init fish | source
+
+# Pokemon
+pokemon-colorscripts -r --no-title
+
