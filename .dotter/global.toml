@@ -43,3 +43,7 @@ depends = []
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
+
+[nushell.files]
+"nushell" = "/.config/nushell"
+
