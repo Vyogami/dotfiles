@@ -45,7 +45,7 @@ depends = []
 "zsh/.zshrc" = "~/.zshrc"
 
 [nushell.files]
-"nushell" = "/.config/nushell"
+"nushell" = "~/.config/nushell"
 
 [powershell-linux.files]
-"powershell" = "/.config/powershell"
+"powershell" = "~/.config/powershell"
