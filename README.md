@@ -28,6 +28,7 @@ This repository contains the dotfile configurations for the following tools:
 - Neovim:
 - VSCode: `extension-manager.sh` and `extensions-list.txt`
 - Zsh: `.zshrc`
+- NuShell: `config.nu`, `env.nu` and `history.txt`
 
 ## Usage
 
@@ -44,7 +45,6 @@ To use these dotfiles, follow these steps:
      ```bash
      cd dotfiles
      ```
-
 
 1. Execute the setup scripts
    > **Note**: Execute setup scripts before deploying configurations.
@@ -84,3 +84,4 @@ If you find any issues with these dotfiles or have suggestions for improvements,
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
