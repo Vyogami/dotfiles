@@ -47,3 +47,5 @@ depends = []
 [nushell.files]
 "nushell" = "/.config/nushell"
 
+[powershell-linux.files]
+"powershell" = "/.config/powershell"

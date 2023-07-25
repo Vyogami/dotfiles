@@ -11,7 +11,8 @@ packages = [
     "neofetch",
     "neovim",
     "zsh",
-    "nushell"
+    "nushell",
+    "powershell-linux"
 ]
 
 [files]
