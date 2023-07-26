@@ -70,6 +70,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Pokemon
+pokemon-colorscripts -r --no-title
+
 # Starship config
 eval "$(starship init bash)"
 
