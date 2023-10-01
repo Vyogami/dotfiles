@@ -37,7 +37,7 @@ To use these dotfiles, follow these steps:
 1. Clone this repository to your local machine:
 
      ```bash
-     git clone --recursive https://github.com/your-username/dotfiles.git
+     git clone --recursive https://github.com/vyogami/dotfiles.git
      ```
 
 1. Change to the dotfiles directory:
