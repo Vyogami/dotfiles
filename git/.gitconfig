@@ -28,14 +28,16 @@
 [user]
 	name = "vyogami"
 	email = "shiv.05cs@gmail.com"
-	signingkey = "161F3104F42157B553E50006F6AF18320BA07F1E"
+	signingkey = "735AA92031BA0EE4"
 [gpg]
 	program = "/usr/bin/gpg"
 [color]
     ui = true
 [commit]
   #template = ~/.gitmessage
-  gpgsign = false
+  gpgsign = true 
+[tag]
+  gpgsign = true 
 [pull]
 	rebase = true
 [init]
