@@ -8,8 +8,6 @@ This repository contains my personal dotfiles, which are the configuration files
 
 Dotfiles are configuration files that customize the behavior and appearance of software applications and operating systems. This repository serves as a centralized location for storing and version-controlling my dotfiles, making it easy to synchronize them across different machines and operating systems.
 
-> I've other branches such `chezmoi` and `stow` which uses respective tools for managing dotfiles but `dotter` branch is the most up to date.
-
 ## Stored Configurations
 
 This repository contains the dotfile configurations for the following tools:
@@ -46,15 +44,6 @@ To use these dotfiles, follow these steps:
      cd dotfiles
      ```
 
-1. Execute the setup scripts
-   > **Note**: Execute setup scripts before deploying configurations.
-
-   - zsh setup script:
-
-     ```shell
-     ./zsh-setup.sh
-     ```
-
 1. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
 
 1. Create `local.toml` using default config corresponding to your OS.
@@ -65,10 +54,13 @@ To use these dotfiles, follow these steps:
      cp .dotter/<os>.toml local.toml
      ```
 
-1. Deploy the dotfiles using Dotter:
+1. Deploy the dotfiles using Dotter binary for respective os:
+    - **Unix(x86)**: ./dotter
+    - **Windows**: ./dotter.exe 
+    - **Unix(arm)**: ./dotter.arm
 
      ```bash
-     dotter deploy
+     ./dotter deploy
      ```
 
      > use `-f` flag to forcefully deploy
