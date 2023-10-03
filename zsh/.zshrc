@@ -17,10 +17,16 @@ extract)
 
 
 ZSH_DISABLE_COMPFIX=true
-source $ZSH/oh-my-zsh.sh
 
 # Pokemon
 pokemon-colorscripts -r --no-title
+
+# Zsh zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Zsh zsh-syntax-highlighting
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 # exa ls configurations
 alias l='exa --icons'
