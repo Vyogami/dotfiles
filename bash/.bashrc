@@ -30,6 +30,8 @@ alias wsl="wsl.exe"
 # Git alias
 alias gitprune="git gc --prune=now"
 
+# Clipboard alias
+alias clipboard="xclip -sel clip"
 
 # exa ls configurations
 alias l='exa --icons'
@@ -76,6 +78,8 @@ pokemon-colorscripts -r --no-title
 # Starship config
 eval "$(starship init bash)"
 
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
