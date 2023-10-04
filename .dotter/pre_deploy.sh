@@ -1,2 +1,3 @@
 #!/bin/sh
-# Add pre deployment scripts
+
+source keyd/keyd-installer.sh
