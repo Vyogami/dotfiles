@@ -8,12 +8,7 @@ depends = []
 #"bash/.bash_profile" = "~/.bash_profile"
 
 [fish.files]
-"fish/completions" = "~/.config/fish/completions"
-"fish/conf.d" = "~/.config/fish/conf.d"
-"fish/functions" = {target = "~/.config/fish/functions", type = "symbolic" }
 "fish/config.fish" = "~/.config/fish/config.fish"
-"fish/fish_plugins" = "~/.config/fish/fish_plugins"
-"fish/fish_variables" = "~/.config/fish/fish_variables"
 
 [git.files]
 "git/.gitconfig" = "~/.gitconfig"
