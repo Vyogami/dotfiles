@@ -2,16 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Enable vi key bindings
+fish_vi_key_bindings 
 
 # Disable fish greeting
 set fish_greeting
 set fish_cursor_insert line blink
 set fish_cursor_replace_one underscore
-
-
-# Prompt configs
-set --global tide_left_prompt_items os pwd git newline character
-set --global tide_right_prompt_items status java virtual_env node vi_mode
 
 
 # ls configurations
