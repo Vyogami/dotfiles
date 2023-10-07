@@ -33,9 +33,9 @@ depends = []
 "neofetch/config.conf" = "~/.config/neofetch/config.conf"
 
 [neovim.files]
-"neovim/lua" = "~/.config/nvim/lua"
-"neovim/init.lua" = "~/.config/nvim/init.lua"
-"neovim/lazy-lock.json" = "~/.config/nvim/lazy-lock.json"
+"neovim/NvChad" = {target = "~/.config/nvim/", type = "symbolic"}
+"neovim/chadrc.lua" = "~/.config/nvim/lua/custom/chadrc.lua"
+"neovim/init.lua" = "~/.config/nvim/lua/custom/init.lua"
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
