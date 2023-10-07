@@ -23,7 +23,7 @@ This repository contains the dotfile configurations for the following tools:
     > [deprecated] it is not managed by dotter
 - Kitty: `kitty.conf` and `themes`
 - Neofetch: `config.conf`
-- Neovim:
+- Neovim: these configs are shamelessly stolen from [Blonteractor](https://github.com/blonteractor/nvim-config)
 - VSCode: `extension-manager.sh` and `extensions-list.txt`
 - Zsh: `.zshrc`
 - NuShell: `config.nu`, `env.nu` and `history.txt`
