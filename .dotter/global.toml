@@ -34,8 +34,7 @@ depends = []
 
 [neovim.files]
 "neovim/NvChad" = {target = "~/.config/nvim/", type = "symbolic"}
-"neovim/chadrc.lua" = "~/.config/nvim/lua/custom/chadrc.lua"
-"neovim/init.lua" = "~/.config/nvim/lua/custom/init.lua"
+"neovim/custom" = {target = "~/.config/nvim/lua/custom/", type = "symbolic"}
 
 [zsh.files]
 "zsh/.zshrc" = "~/.zshrc"
