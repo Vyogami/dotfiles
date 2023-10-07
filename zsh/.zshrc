@@ -81,6 +81,8 @@ alias gitprune="git gc --prune=now"
 # vim keybindings for zsh
 bindkey -v
 
+# set blinking bar as cursor style
+echo '\e[5 q'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

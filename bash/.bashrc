@@ -4,6 +4,9 @@ if [[ $- == *i* ]]; then # in interactive session
 fi
 
 
+# set blinking bar as cursor style
+echo -ne "\e[5 q"
+
 # yay config
 alias search="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | \"{print \$2}\")' | xargs -ro yay -S" 
 
