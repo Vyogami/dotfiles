@@ -32,6 +32,14 @@ This repository contains the dotfile configurations for the following tools:
 
 To use these dotfiles, follow these steps:
 
+## Remote linux installation
+
+```bash
+curl https://raw.githubusercontent.com/vyogami/dotfiles/main/linux-install.sh | sh
+```
+
+### Manual
+
 1. Clone this repository to your local machine:
 
      ```bash
@@ -76,4 +84,3 @@ If you find any issues with these dotfiles or have suggestions for improvements,
 ## License
 
 This repository is licensed under the Unlicense. See the [LICENSE](LICENSE) file for more information.
-
