@@ -26,3 +26,5 @@ pretty_print "Installing keyd && deploying configs"
 cd ~/.dotfiles/
 cp ./.dotter/linux.toml ./.dotter/local.toml
 ./dotter -f  
+
+pretty_print "Installation complete"
