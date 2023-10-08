@@ -41,7 +41,7 @@ depends = []
 "zsh/.zsh" = {target = "~/.zsh", type = "symbolic"}
 
 [nushell.files]
-"nushell" = "~/.config/nushell"
+"nushell/config.nu" = "~/.config/nushell/config.nu"
 
 [powershell-linux.files]
 "powershell" = "~/.config/powershell"
