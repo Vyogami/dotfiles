@@ -33,6 +33,9 @@ alias wsl="wsl.exe"
 # Git alias
 alias gitprune="git gc --prune=now"
 
+# sudo edit with preserving user envs
+alias sudouser="sudo -E -s"
+
 # Clipboard alias
 alias clipboard="xclip -sel clip"
 

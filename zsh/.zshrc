@@ -51,6 +51,9 @@ alias lh='exa --icons -h'
 # yay config
 alias search="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | \"{print \$2}\")' | xargs -ro yay -S" 
 
+# sudo edit with preserving user envs
+alias sudouser="sudo -E -s"
+
 # Clipboard alias
 alias clipboard="xclip -sel clip"
 

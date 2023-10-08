@@ -50,6 +50,9 @@ alias search="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | \"
 # Clipboard alias
 alias clipboard="xclip -sel clip"
 
+# sudo edit with preserving user envs
+alias sudouser="sudo -E -s"
+
 # Custom aliases
 alias cls='clear'
 alias c='clear'
