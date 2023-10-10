@@ -51,3 +51,6 @@ depends = []
 
 [keyd.files]
 "keyd/default.conf" = "/etc/keyd/default.conf"
+
+[helix.files]
+"helix/" = "~/.config/helix/"

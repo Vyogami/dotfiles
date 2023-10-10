@@ -13,7 +13,8 @@ packages = [
     "zsh",
     "nushell",
     "powershell-linux",
-    "starship"
+    "starship",
+    "helix"
 ]
 
 [files]
