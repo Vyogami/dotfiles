@@ -22,6 +22,12 @@ select = "underline"
 render = true
 character = "▏"
 
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
 [editor.lsp]
 display-messages = true
 display-inlay-hints = true
