@@ -26,7 +26,7 @@
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	name = "vyogami"
+	name = "Shivam Shandilya"
 	email = "shiv.05cs@gmail.com"
 	signingkey = "735AA92031BA0EE4"
 [gpg]
