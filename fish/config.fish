@@ -99,3 +99,4 @@ if test -f ~/miniconda3/bin/conda
 end
 # <<< conda initialize <<<
 
+export PATH="$PATH:$HOME/.cargo/bin"
