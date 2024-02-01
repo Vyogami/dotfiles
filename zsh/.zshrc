@@ -91,20 +91,6 @@ echo '\e[5 q'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('~/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "~/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "~/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="~/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # pnpm
 export PNPM_HOME="/home/codereaper/.local/share/pnpm"
@@ -122,3 +108,32 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
+
+source /home/vyogami/.config/broot/launcher/bash/br
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/vyogami/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/vyogami/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/vyogami/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/vyogami/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda deactivate
+
+# Pacman
+alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
+alias ua-update-all='export TMPFILE="$(mktemp)"; \
+    sudo true; \
+    rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
+      && ua-drop-caches \
+      && yay -Syy --noconfirm'
