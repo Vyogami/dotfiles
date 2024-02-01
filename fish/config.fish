@@ -23,24 +23,24 @@ function nuc
 end
 
 
-# exa ls configurations
-alias l='exa --icons'
-# alias l='exa -ons'
-alias ls='exa --icons'
-alias la='exa --icons -a'
-alias lf='exa --icons -a -F'
-alias ld='exa --icons -a -d'
-alias lt='exa --icons -a -T'
-alias lr='exa --icons -a -r'
+# eza ls configurations
+alias l='eza --icons'
+# alias l='eza -ons'
+alias ls='eza --icons'
+alias la='eza --icons -a'
+alias lf='eza --icons -a -F'
+alias ld='eza --icons -a -d'
+alias lt='eza --icons -a -T'
+alias lr='eza --icons -a -r'
 
-alias ll='exa --icons -1'
-alias lfl='exa --icons -a -F -l'
-alias lla='exa --icons -a -1'
-alias ldl='exa --icons -a -d -l'
-alias ltl='exa --icons -a -T -l'
-alias lrl='exa --icons -a -T -l'
+alias ll='eza --icons -1'
+alias lfl='eza --icons -a -F -l'
+alias lla='eza --icons -a -1'
+alias ldl='eza --icons -a -d -l'
+alias ltl='eza --icons -a -T -l'
+alias lrl='eza --icons -a -T -l'
 
-alias lh='exa --icons -h'
+alias lh='eza --icons -h'
 alias lsa='ls -lah'
 
 
