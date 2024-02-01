@@ -14,3 +14,5 @@ source ~/.cache/starship/init.nu
 # Pokemon
 pokemon-colorscripts -r --no-title
 
+
+source /home/vyogami/.config/broot/launcher/nushell/br
