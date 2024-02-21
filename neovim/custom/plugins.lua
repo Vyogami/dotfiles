@@ -27,15 +27,6 @@ local plugins = {
 			},
 		},
 
-		-- dependencies = {
-		--   -- format & linting
-		--   {
-		--     "jose-elias-alvarez/null-ls.nvim",
-		--     config = function()
-		--       require "custom.configs.null-ls"
-		--     end,
-		--   },
-		-- },
 		config = function()
 			require("plugins.configs.lspconfig")
 			require("custom.configs.lspconfig")
@@ -159,36 +150,36 @@ local plugins = {
 		end,
 	},
 
-	{
-		"Zeioth/compiler.nvim",
-		cmd = { "CompilerOpen", "CompilerToggleResults" },
-		dependencies = { "stevearc/overseer.nvim" },
-		config = function(_, opts)
-			require("compiler").setup(opts)
-		end,
-	},
-
-	{
-		"stevearc/overseer.nvim",
-		commit = "3047ede61cc1308069ad1184c0d447ebee92d749",
-		cmd = { "CompilerOpen", "CompilerToggleResults" },
-		opts = {
-			-- Tasks are disposed 5 minutes after running to free resources.
-			-- If you need to close a task inmediatelly:
-			-- press ENTER in the menu you see after compiling on the task you want to close.
-			task_list = {
-				direction = "bottom",
-				min_height = 25,
-				max_height = 25,
-				default_detail = 1,
-				bindings = {
-					["q"] = function()
-						vim.cmd("OverseerClose")
-					end,
-				},
-			},
-		},
-	},
+	-- {
+	-- 	"Zeioth/compiler.nvim",
+	-- 	cmd = { "CompilerOpen", "CompilerToggleResults" },
+	-- 	dependencies = { "stevearc/overseer.nvim" },
+	-- 	config = function(_, opts)
+	-- 		require("compiler").setup(opts)
+	-- 	end,
+	-- },
+	--
+	-- {
+	-- 	"stevearc/overseer.nvim",
+	-- 	commit = "3047ede61cc1308069ad1184c0d447ebee92d749",
+	-- 	cmd = { "CompilerOpen", "CompilerToggleResults" },
+	-- 	opts = {
+	-- 		-- Tasks are disposed 5 minutes after running to free resources.
+	-- 		-- If you need to close a task inmediatelly:
+	-- 		-- press ENTER in the menu you see after compiling on the task you want to close.
+	-- 		task_list = {
+	-- 			direction = "bottom",
+	-- 			min_height = 25,
+	-- 			max_height = 25,
+	-- 			default_detail = 1,
+	-- 			bindings = {
+	-- 				["q"] = function()
+	-- 					vim.cmd("OverseerClose")
+	-- 				end,
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 	-- {
 	--   "lvimuser/lsp-inlayhints.nvim",
 	--   branch = "anticonceal",
@@ -202,6 +193,15 @@ local plugins = {
 		lazy = false,
 	},
 
+	{
+		"stevearc/conform.nvim",
+		--  for users those who want auto-save conform + lazyloading!
+		-- event = "BufWritePre"
+		lazy = false,
+		config = function()
+			require("custom.configs.conform")
+		end,
+	},
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",
