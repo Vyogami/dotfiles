@@ -137,3 +137,7 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
       && ua-drop-caches \
       && yay -Syy --noconfirm'
+# kw
+export fpath=(/home/vyogami/.local/lib/kw $fpath)
+autoload compinit && compinit -i
+PATH=/home/vyogami/.local/bin:$PATH # kw
