@@ -103,3 +103,6 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
       && ua-drop-caches \
       && yay -Syy --noconfirm'
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

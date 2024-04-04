@@ -141,3 +141,6 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
 export fpath=(/home/vyogami/.local/lib/kw $fpath)
 autoload compinit && compinit -i
 PATH=/home/vyogami/.local/bin:$PATH # kw
+
+# Atuin config
+eval "$(atuin init zsh)"

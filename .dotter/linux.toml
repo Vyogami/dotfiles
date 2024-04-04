@@ -14,7 +14,8 @@ packages = [
     "nushell",
     "powershell-linux",
     "starship",
-    "helix"
+    "helix",
+    "atuin"
 ]
 
 [files]

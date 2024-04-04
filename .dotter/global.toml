@@ -55,3 +55,6 @@ depends = []
 
 [helix.files]
 "helix/" = "~/.config/helix/"
+
+[atuin.files]
+"atuin" = "~/.config/atuin"
