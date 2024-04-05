@@ -143,4 +143,4 @@ autoload compinit && compinit -i
 PATH=/home/vyogami/.local/bin:$PATH # kw
 
 # Atuin config
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"

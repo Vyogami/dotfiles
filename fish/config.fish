@@ -116,4 +116,7 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && yay -Syy --noconfirm'
 
 # Atuin config
-eval "$(atuin init fish)"
+# eval "$(atuin init fish)"
+
+# Created by `pipx` on 2024-04-04 23:50:45
+set PATH $PATH /home/vyogami/.local/bin
