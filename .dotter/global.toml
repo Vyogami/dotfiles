@@ -28,7 +28,7 @@ depends = []
 "kitty/kitty.conf" = { target = "~/.config/kitty/kitty.conf", type = "symbolic" }
 "kitty/themes" = {target = "~/.config/kitty/themes", type = "symbolic"}
 "kitty/kitty-themes/themes" = {target = "~/.config/kitty/themes/", type = "symbolic"}
-"kitty/tab_bar.py" = "~/.config/kitty/"
+"kitty/tab_bar.py" = "~/.config/kitty/tab_bar.py"
 
 [neofetch.files]
 "neofetch/config.conf" = "~/.config/neofetch/config.conf"
