@@ -80,6 +80,8 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Git alias
 alias gitprune="git gc --prune=now"
 
+# vim alias
+alias vi="nvim"
 
 # vim keybindings for zsh
 bindkey -v

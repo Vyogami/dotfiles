@@ -16,6 +16,8 @@ alias cls='clear'
 alias c='clear'
 alias mk='mkdir'
 
+# vim alias
+alias vi="nvim"
 
 # For zoxide
 eval "$(zoxide init bash --cmd cd)"

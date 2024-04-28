@@ -115,6 +115,10 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && ua-drop-caches \
       && yay -Syy --noconfirm'
 
+# vim alias
+alias vi="nvim"
+
+
 # Atuin config
 # eval "$(atuin init fish)"
 
