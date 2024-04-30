@@ -107,4 +107,9 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && yay -Syy --noconfirm'
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+
+# atuin configurations
 eval "$(atuin init bash)"
+
+# mise configurations
+eval "$(mise activate bash)"

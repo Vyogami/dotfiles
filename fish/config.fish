@@ -124,3 +124,6 @@ alias vi="nvim"
 
 # Created by `pipx` on 2024-04-04 23:50:45
 set PATH $PATH /home/vyogami/.local/bin
+
+# Mise configuartions
+mise activate fish | source

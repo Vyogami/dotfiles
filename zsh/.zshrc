@@ -146,3 +146,9 @@ PATH=/home/vyogami/.local/bin:$PATH # kw
 
 # Atuin config
 # eval "$(atuin init zsh)"
+#compdef mise
+local curcontext="$curcontext"
+
+
+# mise configurations 
+eval "$(mise activate zsh)"
