@@ -79,6 +79,8 @@ alias wsl="wsl.exe"
 
 # batman configs
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
+
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Git alias
