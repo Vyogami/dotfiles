@@ -24,23 +24,23 @@ end
 
 
 # eza ls configurations
-alias l='eza --icons'
-# alias l='eza -ons'
-alias ls='eza --icons'
-alias la='eza --icons -a'
-alias lf='eza --icons -a -F'
-alias ld='eza --icons -a -d'
-alias lt='eza --icons -a -T'
-alias lr='eza --icons -a -r'
+alias l='eza -F --icons'
+# alias l='eza -F -ons'
+alias ls='eza -F --icons'
+alias la='eza -F --icons -a'
+alias lf='eza -F --icons -a -F'
+alias ld='eza -F --icons -a -d'
+alias lt='eza -F --icons -a -T'
+alias lr='eza -F --icons -a -r'
 
-alias ll='eza --icons -1'
-alias lfl='eza --icons -a -F -l'
-alias lla='eza --icons -a -1'
-alias ldl='eza --icons -a -d -l'
-alias ltl='eza --icons -a -T -l'
-alias lrl='eza --icons -a -T -l'
+alias ll='eza -F --icons -1'
+alias lla='eza -F --icons -a -1'
+alias lfl='eza -F --icons -a -F -l'
+alias ldl='eza -F --icons -a -d -l'
+alias ltl='eza -F --icons -a -T -l'
+alias lrl='eza -F --icons -a -T -l'
 
-alias lh='eza --icons -h'
+alias lh='eza -F --icons -h'
 alias lsa='ls -lah'
 
 
