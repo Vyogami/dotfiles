@@ -116,20 +116,20 @@ source /home/vyogami/.config/broot/launcher/bash/br
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/vyogami/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/vyogami/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/vyogami/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/vyogami/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-conda deactivate
+# __conda_setup="$('/home/vyogami/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/vyogami/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/vyogami/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/vyogami/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+#
+# conda deactivate
 
 # Pacman
 alias ua-drop-caches='sudo paccache -rk3; yay -Sc --aur --noconfirm'
