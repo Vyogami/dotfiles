@@ -15,7 +15,8 @@ packages = [
     "powershell-linux",
     "starship",
     "helix",
-    "atuin"
+    "atuin",
+    "yazi"
 ]
 
 [files]

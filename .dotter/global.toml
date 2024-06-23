@@ -58,3 +58,6 @@ depends = []
 
 [atuin.files]
 "atuin" = "~/.config/atuin"
+
+[yazi.files]
+"yazi" = "~/.config/yazi/"
