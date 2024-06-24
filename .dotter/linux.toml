@@ -16,7 +16,8 @@ packages = [
     "starship",
     "helix",
     "atuin",
-    "yazi"
+    "yazi",
+    "tmux"
 ]
 
 [files]
