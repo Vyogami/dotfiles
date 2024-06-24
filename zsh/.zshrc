@@ -40,6 +40,7 @@ alias lr='eza -F --icons -a -r'
 
 alias ll='eza -F --icons -1'
 alias lla='eza -F --icons -a -1'
+alias lsa='eza -F --icons -a -1'
 alias lfl='eza -F --icons -a -F -l'
 alias ldl='eza -F --icons -a -d -l'
 alias ltl='eza -F --icons -a -T -l'
@@ -163,3 +164,6 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Bind alt+l to clear screen
+bindkey '\el' clear-screen

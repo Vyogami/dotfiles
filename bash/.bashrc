@@ -109,7 +109,10 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 
 # atuin configurations
-eval "$(atuin init bash)"
+# eval "$(atuin init bash)"
 
 # mise configurations
 eval "$(mise activate bash)"
+
+# Bind alt+l to clear screen
+bind '"\el":clear'

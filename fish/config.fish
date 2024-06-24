@@ -139,3 +139,15 @@ function yy
 	end
 	rm -f -- "$tmp"
 end
+
+# # Bind alt+l to clear screen
+
+function fish_user_key_bindings
+  bind --preset --erase \el
+  bind --preset --erase -M insert \el
+  bind --preset --erase -M visual \el
+  bind --preset -M insert \el 'clear; commandline -f repaint'
+  bind --preset -M visual \el 'clear; commandline -f repaint'
+  bind --preset \el 'clear; commandline -f repaint'
+end
+
