@@ -116,3 +116,6 @@ eval "$(mise activate bash)"
 
 # Bind alt+l to clear screen
 bind '"\el":clear'
+
+# Set default editor to nvim
+export EDITOR=nvim

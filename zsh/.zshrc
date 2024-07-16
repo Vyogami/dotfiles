@@ -1,3 +1,6 @@
+ZSH_DISABLE_COMPFIX=true
+
+# Plugins
 plugins=(
 git
 sudo
@@ -16,7 +19,6 @@ dotenv
 extract)
 
 
-ZSH_DISABLE_COMPFIX=true
 
 # Pokemon
 pokemon-colorscripts -r --no-title
@@ -77,10 +79,6 @@ alias wsl="wsl.exe"
 # batman configs
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-# Git alias
-alias gitprune="git gc --prune=now"
 
 # vim alias
 alias vi="nvim"
@@ -107,13 +105,6 @@ esac
 # Starship config
 eval "$(starship init zsh)"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-
-
-source /home/vyogami/.config/broot/launcher/bash/br
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -141,10 +132,6 @@ alias ua-update-all='export TMPFILE="$(mktemp)"; \
       && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
       && ua-drop-caches \
       && yay -Syy --noconfirm'
-# kw
-export fpath=(/home/vyogami/.local/lib/kw $fpath)
-autoload compinit && compinit -i
-PATH=/home/vyogami/.local/bin:$PATH # kw
 
 # Atuin config
 # eval "$(atuin init zsh)"
@@ -167,3 +154,10 @@ function yy() {
 
 # Bind alt+l to clear screen
 bindkey '\el' clear-screen
+
+# Set home and end key as zsh doesn't handle them by default
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+# Set default editor to nvim
+export EDITOR=nvim

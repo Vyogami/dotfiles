@@ -151,3 +151,5 @@ function fish_user_key_bindings
   bind --preset \el 'clear; commandline -f repaint'
 end
 
+# Set editor to nvim
+export EDITOR=nvim
