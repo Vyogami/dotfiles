@@ -1,0 +1,94 @@
+# Set default shell to fish if available, otherwise bash
+run-shell "[ -x \"$(command -v fish)\" ] && tmux set-option -g default-shell $(command -v fish) || tmux set-option -g default-shell $(command -v bash)"
+
+# Enable true color support
+set -sa terminal-overrides ",xterm*:Tc"
+set -g default-terminal "tmux-256color"
+
+# Enable extended keys
+set -s extended-keys on
+
+# Set prefix key
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# Vim style pane selection
+bind h select-pane -L
+bind j select-pane -D 
+bind k select-pane -U
+bind l select-pane -R
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+set -g pane-base-index 1
+set-window-option -g pane-base-index 1
+set-option -g renumber-windows on
+
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Switch windows with Ctrl+u/o
+bind -n C-u previous-window
+bind -n C-o next-window
+
+# Enable vi mode
+set-window-option -g mode-keys vi
+
+# Vi copypaste bindings
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+# Split bindings
+bind -n C-S-Enter split-window -h -c "#{pane_current_path}"
+bind -n C-Enter split-window -v -c "#{pane_current_path}"
+
+# Window management
+bind-key -n C-S-w kill-pane
+bind-key -n C-S-t new-window
+bind-key -n C-t new-session
+
+# Resize panes
+bind-key -n -r C-S-H resize-pane -L
+bind-key -n -r C-S-L resize-pane -R
+bind-key -n -r C-S-K resize-pane -U 
+bind-key -n -r C-S-J resize-pane -D
+
+# Enable mouse support
+set -g mouse on
+
+# Basic status bar (no plugins required)
+set -g status-style bg=default,fg=white
+set -g status-left "#[fg=green]#H #[fg=white]• #[fg=green]#S #[fg=white]• "
+set -g status-right "#[fg=green]%H:%M #[fg=white]• #[fg=green]%d-%b-%y"
+set -g status-left-length 50
+
+# Window status format
+set-window-option -g window-status-format "#[fg=white]#I:#W"
+set-window-option -g window-status-current-format "#[fg=green]#I:#W"
+
+# Scrollback history
+set -g history-limit 50000
+
+# Reduce escape-time (improves vim/neovim experience)
+set -sg escape-time 10
+
+# Enable focus events (better vim/neovim integration)
+set -g focus-events on
+
+# Better scrolling
+tmux_commands_with_legacy_scroll="nano less more man git"
+bind-key -T root WheelUpPane \
+    if-shell -Ft= '#{?mouse_any_flag,1,#{pane_in_mode}}' \
+        'send -Mt=' \
+        'if-shell -t= "#{?alternate_on,true,false} || echo \"#{tmux_commands_with_legacy_scroll}\" | grep -q \"#{pane_current_command}\"" \
+            "send -t= Up" "copy-mode -et="'
+bind-key -T root WheelDownPane \
+    if-shell -Ft = '#{?pane_in_mode,1,#{mouse_any_flag}}' \
+        'send -Mt=' \
+        'if-shell -t= "#{?alternate_on,true,false} || echo \"#{tmux_commands_with_legacy_scroll}\" | grep -q \"#{pane_current_command}\"" \
+            "send -t= Down" "send -Mt="'
