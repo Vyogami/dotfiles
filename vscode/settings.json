@@ -1,0 +1,330 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "editor.inlineSuggest.enabled": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "explorer.confirmDragAndDrop": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.mouseWheelZoom": true,
+    "explorer.confirmDelete": false,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "yaml": false
+    },
+    "workbench.sideBar.location": "right",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontSize": 16,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "git.autofetch": true,
+    "matlab.mlintpath": "/usr/local/MATLAB/R2022b/bin/glnxa64/mlint",
+    "githubPullRequests.pullBranch": "never",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "projectManager.git.baseFolders": [
+        "~/git",
+        "/run/media/vyogami/media-disk2/"
+    ],
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.minimap.enabled": false,
+    "cSpell.userWords": [
+        "aiohttp",
+        "Amigrant",
+        "appskey",
+        "ASGI",
+        "balsamiq",
+        "Bubbletea",
+        "cachetools",
+        "CCNA",
+        "CGPA",
+        "chirpstack",
+        "Coredge",
+        "dotenv",
+        "ELINT",
+        "euis",
+        "Everynet",
+        "fastapi",
+        "fport",
+        "FUOTA",
+        "guinnes",
+        "hackathon",
+        "httpx",
+        "keepalive",
+        "lorawan",
+        "Manav",
+        "Netgala",
+        "Nextra",
+        "Noida",
+        "NTRO",
+        "nwkskey",
+        "Pluggable",
+        "ppts",
+        "protobuf",
+        "pydantic",
+        "pytest",
+        "RDRAND",
+        "Scrapy",
+        "Shandilya",
+        "Shivam",
+        "shulin",
+        "SPOC",
+        "starlette",
+        "subseq",
+        "Suricata",
+        "testpaths",
+        "Vadi",
+        "Venkatesh",
+        "Venkatesh's",
+        "waitlist",
+        "शुलिन"
+    ],
+    "window.titleBarStyle": "custom",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "markdown-pdf.breaks": true,
+    "markdown-pdf.footerTemplate": "<div style=\"font-size: 9px; margin: 0 auto;\"> <span class='pageNumber'></span> </div>",
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.highlightStyle": "googlecode.css",
+    "redhat.telemetry.enabled": true,
+    "codesnap.target": "window",
+    "codesnap.transparentBackground": true,
+    "codesnap.backgroundColor": "00FFFFFF",
+    "codesnap.boxShadow": "rgba(0, 0, 0, 0) 0px 20px 68px",
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "zig": "zig run",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName",
+        "mojo": "mojo run"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "python.analysis.extraPaths": [
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.6-linux-x64",
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.7-linux-x64",
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.18-linux-x64"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.6-linux-x64",
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.7-linux-x64",
+        "/home/vyogami/.vscode/extensions/continue.continue-0.6.18-linux-x64"
+    ],
+    "diffEditor.codeLens": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.analysis.autoFormatStrings": true,
+    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.trimAutoWhitespace": false,
+    "[mdx]": {
+        "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    },
+    "files.autoSave": "afterDelay",
+    "emptyIndent.removeIndent": false,
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "editor.lineNumbers": "relative",
+    "vim.useSystemClipboard": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "w"
+            ],
+            "after": [
+                "\\",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "b"
+            ],
+            "after": [
+                "\\",
+                "b"
+            ]
+        },
+        {
+            "before": [
+                "e"
+            ],
+            "after": [
+                "\\",
+                "e"
+            ]
+        },
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "i",
+                "w"
+            ],
+            "after": [
+                "i",
+                "\\",
+                "w"
+            ]
+        },
+    ],
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.overviewRulerBorder": false,
+    "workbench.colorTheme": "Ayu Dark",
+    "window.menuBarVisibility": "toggle",
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-p>": false,
+        "<C-b>": false,
+        "<C-w>": false,
+    },
+    "nerdtree.alwaysShowSidebar": true,
+    "pylint.args": [
+        "\"pylint.args\": [\"--disable=C0116\"]"
+    ],
+    "breadcrumbs.enabled": false,
+    "notebook.lineNumbers": "on",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode_vibrancy.theme": "Default Dark",
+    "workbench.startupEditor": "none",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "python.analysis.autoImportCompletions": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
+"latex-workshop.latex.outDir": "%DIR%/.out",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk",
+                "copy-pdf",
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "-auxdir=.aux",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--aux-directory=.aux",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "copy-pdf",
+            "command": "cp",
+            "args": [
+                "%OUTDIR%/%DOCFILE%.pdf",
+                "%DIR%/%DOCFILE%.pdf"
+            ]
+        }
+    ],
+    "latex-workshop.message.error.show": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "cSpell.language": "en,hi",
+    "vim.smartRelativeLine": true,
+    "explorer.confirmPasteNative": false,
+    "playwright.reuseBrowser": true,
+    "playwright.showTrace": false,
+    "ruff.lint.ignore": [
+        "F401"
+    ],
+    "[xml]": {
+        "editor.defaultFormatter": "DotJoshJohnson.xml"
+    },
+    "workbench.preferredHighContrastColorTheme": "Ayu Dark"
+}
