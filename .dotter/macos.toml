@@ -1,0 +1,16 @@
+# An array of the names of all packages that are selected.
+# Only the files and variables that belong to packages in this list are kept.
+# macOS profile: only packages that are actually managed on macOS today.
+# Add common packages (git, zsh, tmux, ...) here after verifying the repo
+# version matches what is already on the Mac, to avoid clobbering local config.
+includes = []
+
+packages = [
+    "ghostty",
+    "karabiner",
+    "hammerspoon"
+]
+
+[files]
+
+[variables]

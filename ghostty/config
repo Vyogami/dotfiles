@@ -1,0 +1,5 @@
+background-opacity = 0.75
+background-blur-radius = 40
+
+
+mouse-scroll-multiplier = precision:1,discrete:0.3

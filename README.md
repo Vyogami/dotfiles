@@ -56,10 +56,11 @@ curl https://raw.githubusercontent.com/vyogami/dotfiles/main/linux-install.sh | 
 
 1. Create `local.toml` using default config corresponding to your OS.
     - **Linux**: linux.toml
+    - **macOS**: macos.toml
     - **Windows**: windows.toml
 
      ```bash
-     cp .dotter/<os>.toml local.toml
+     cp .dotter/<os>.toml .dotter/local.toml
      ```
 
 1. Deploy the dotfiles using Dotter binary for respective os:
@@ -74,6 +75,17 @@ curl https://raw.githubusercontent.com/vyogami/dotfiles/main/linux-install.sh | 
      > use `-f` flag to forcefully deploy
 
      This command will deploy the dotfiles to their respective target locations, based on the configurations defined in the `.dotter` directory.
+
+     > **macOS note:** the `macos` profile manages `ghostty`, `karabiner` and
+     > `hammerspoon`. The Hammerspoon menu-bar helper is a small Swift program
+     > that must be compiled once after deploying:
+     >
+     > ```bash
+     > ./hammerspoon/build.sh
+     > ```
+     >
+     > It reads `hammerspoon/bin/spaceswitch.swift` and builds
+     > `~/.hammerspoon/bin/spaceswitch` (requires the Xcode command line tools).
 
 1. Customize the dotfiles according to your preferences. Feel free to modify or add any configuration files to suit your needs.
 

@@ -62,3 +62,12 @@ depends = []
 [tmux.files]
 "tmux/tmux.conf" = "~/.config/tmux/tmux.conf"
 "tmux/tpm" = "~/.tmux/plugins/tpm"
+
+[ghostty.files]
+"ghostty/config" = "~/.config/ghostty/config"
+
+[karabiner.files]
+"karabiner/karabiner.json" = "~/.config/karabiner/karabiner.json"
+
+[hammerspoon.files]
+"hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
