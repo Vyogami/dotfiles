@@ -83,6 +83,7 @@ clickTap = hs.eventtap.new({ hs.eventtap.event.types.leftMouseDown }, function(e
   hs.timer.doAfter(0, function() hs.spaces.toggleMissionControl() end)
   return false
 end)
+-- Empty menu-bar click -> Mission Control.
 clickTap:start()
 
 -- Cmd+Tab -> cycle keyboard focus to the frontmost window on the next display.
@@ -112,6 +113,12 @@ local function focusNextMonitorAction()
   local w = frontmostWindowOnScreen(target)
   if w then
     w:focus()
+    -- Also move the cursor onto the target display: macOS routes the
+    -- space-switch hotkey (Ctrl+Cmd+Arrow) to the display under the CURSOR,
+    -- not the keyboard-focused window. Without this, desktop switching would
+    -- still act on the previous monitor until the mouse is moved manually.
+    local wf = w:frame()
+    hs.mouse.absolutePosition({ x = wf.x + wf.w / 2, y = wf.y + wf.h / 2 })
   else
     local f = target:frame()
     hs.mouse.absolutePosition({ x = f.x + f.w / 2, y = f.y + f.h / 2 })

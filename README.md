@@ -1,98 +1,122 @@
 # Dotfiles
 
-This repository contains my personal dotfiles, which are the configuration files for various operating systems and tools. I manage these dotfiles using the [Dotter](https://github.com/SuperCuber/dotter), a dotfile manager and templater written in Rust.
+My personal configs for macOS, Linux and Windows, managed with [Dotter](https://github.com/SuperCuber/dotter).
 
 ![codereaper-theme](./assets/codereaper-desktop-min.png)
 
-## Introduction
+## What's inside
 
-Dotfiles are configuration files that customize the behavior and appearance of software applications and operating systems. This repository serves as a centralized location for storing and version-controlling my dotfiles, making it easy to synchronize them across different machines and operating systems.
+Configs are grouped by tool. [Dotter](https://github.com/SuperCuber/dotter) symlinks
+each one into place based on a per-OS profile, so the same repo drives macOS, Linux
+and Windows.
 
-## Stored Configurations
+- **Shells & terminals:** Bash, Zsh, Fish, NuShell, Ghostty, Kitty
+- **Editors:** Neovim, Helix, VSCode. _Neovim configs shamelessly stolen from [Blonteractor](https://github.com/blonteractor/nvim-config) 😼_
+- **Keyboard:** Karabiner-Elements (macOS), keyd (Linux)
+- **macOS automation:** Hammerspoon (menu-bar Spaces + window tricks)
+- **Tooling & misc:** Git, Starship, Atuin, Neofetch, Tmux
+- **Desktop:** Grub, GNOME Shell (not managed by Dotter; see the [gnome-shell configs](https://github.com/legitShivam/gnome-shell-configs/blob/main/README.md))
 
-This repository contains the dotfile configurations for the following tools:
+## Install
 
-- Bash: `.bashrc`
-- Fish: `config.fish`
-- Git: `.gitconfig` and `.gitmessage`
-- Gnome Shell: `extensions`, `extensions-settings.ini`, `gnome-settings.ini`, and `.themes`
-
-     > It is not managed by dotter! for more information please refer to gnome-shell [documentation](https://github.com/legitShivam/gnome-shell-configs/blob/main/README.md)
-
-- Grub: `grub` and `themes`
-    > [deprecated] it is not managed by dotter
-- Kitty: `kitty.conf` and `themes`
-- Neofetch: `config.conf`
-- Neovim: these configs are shamelessly stolen from [Blonteractor](https://github.com/blonteractor/nvim-config)
-- VSCode: `extension-manager.sh` and `extensions-list.txt`
-- Zsh: `.zshrc`
-- NuShell: `config.nu`, `env.nu` and `history.txt`
-
-## Usage
-
-To use these dotfiles, follow these steps:
-
-## Remote linux installation
+The quickest path on a fresh Linux box is the bootstrap script, which pulls the
+repo and deploys everything for you:
 
 ```bash
+# Linux one-liner
 curl https://raw.githubusercontent.com/vyogami/dotfiles/main/linux-install.sh | sh
 ```
 
-### Manual
+On macOS or Windows (or if you'd rather do it by hand), use the manual steps below.
 
-1. Clone this repository to your local machine:
+<details>
+<summary>Manual install (all platforms)</summary>
+
+<br>
+
+1. Clone (needs [Dotter](https://github.com/SuperCuber/dotter) installed):
 
      ```bash
-     git clone --recursive https://github.com/vyogami/dotfiles.git
+     git clone --recursive https://github.com/vyogami/dotfiles.git && cd dotfiles
      ```
 
-1. Change to the dotfiles directory:
-
-     ```bash
-     cd dotfiles
-     ```
-
-1. Install Dotter if you haven't already. You can find the installation instructions in the [Dotter repository](https://github.com/SuperCuber/dotter).
-
-1. Create `local.toml` using default config corresponding to your OS.
-    - **Linux**: linux.toml
-    - **macOS**: macos.toml
-    - **Windows**: windows.toml
+2. Pick your OS profile (`linux` / `macos` / `windows`) and deploy:
 
      ```bash
      cp .dotter/<os>.toml .dotter/local.toml
+     ./dotter deploy        # ./dotter.arm (Unix arm) | ./dotter.exe (Windows)
      ```
 
-1. Deploy the dotfiles using Dotter binary for respective os:
-    - **Unix(x86)**: ./dotter
-    - **Windows**: ./dotter.exe 
-    - **Unix(arm)**: ./dotter.arm
+     > Safe to re-run; add `-f` to overwrite existing files.
+
+</details>
+
+<details>
+<summary>macOS extras (Karabiner + Hammerspoon)</summary>
+
+<br>
+
+The `macos` profile manages `ghostty`, `karabiner` and `hammerspoon`.
+
+1. **Karabiner** loads `karabiner.json` automatically; no build step.
+2. **Hammerspoon** needs its space-switch helper compiled once (binary is git-ignored):
 
      ```bash
-     ./dotter deploy
+     ./hammerspoon/build.sh   # -> ~/.hammerspoon/bin/spaceswitch (needs Xcode CLT)
      ```
 
-     > use `-f` flag to forcefully deploy
+3. Grant Hammerspoon **Accessibility**, and enable *Move left/right a space* under
+   System Settings → Keyboard → Keyboard Shortcuts → Mission Control.
 
-     This command will deploy the dotfiles to their respective target locations, based on the configurations defined in the `.dotter` directory.
+</details>
 
-     > **macOS note:** the `macos` profile manages `ghostty`, `karabiner` and
-     > `hammerspoon`. The Hammerspoon menu-bar helper is a small Swift program
-     > that must be compiled once after deploying:
-     >
-     > ```bash
-     > ./hammerspoon/build.sh
-     > ```
-     >
-     > It reads `hammerspoon/bin/spaceswitch.swift` and builds
-     > `~/.hammerspoon/bin/spaceswitch` (requires the Xcode command line tools).
+## Keybindings
 
-1. Customize the dotfiles according to your preferences. Feel free to modify or add any configuration files to suit your needs.
+Most of my muscle memory lives in the keyboard remaps. Karabiner covers macOS,
+keyd mirrors the important bits on Linux, and Hammerspoon adds window and Spaces
+automation on top. Expand a section for the full mapping.
+
+<details>
+<summary>Karabiner (macOS)</summary>
+
+| Keys | Action |
+| --- | --- |
+| <kbd>Space</kbd> (hold) + <kbd>h</kbd>/<kbd>j</kbd>/<kbd>i</kbd>/<kbd>k</kbd>/<kbd>l</kbd>/<kbd>;</kbd> … | vim-style arrow motion layer |
+| <kbd>Caps Lock</kbd> (tap / hold) | <kbd>Esc</kbd> / <kbd>Ctrl</kbd> |
+| <kbd>Esc</kbd> | <kbd>Caps Lock</kbd> |
+| <kbd>⌥</kbd> tapped alone | Mission Control |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> (paste) everywhere |
+| Zen: <kbd>Ctrl</kbd> + <kbd>T</kbd>/<kbd>W</kbd>/<kbd>L</kbd>/<kbd>R</kbd>/<kbd>S</kbd>/<kbd>C</kbd>/<kbd>X</kbd>/<kbd>Z</kbd>/<kbd>1</kbd> to <kbd>0</kbd>/<kbd>-</kbd>/<kbd>=</kbd>/<kbd>,</kbd> | <kbd>⌘</kbd> + equivalent (<kbd>Ctrl</kbd> + <kbd>Tab</kbd> & <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + \* preserved) |
+| External Redgear keyboard | Swaps left <kbd>⌘</kbd>/<kbd>⌥</kbd>, maps left <kbd>Ctrl</kbd> → <kbd>⌘</kbd> |
+</details>
+
+<details>
+<summary>Hammerspoon (macOS)</summary>
+
+| Input | Action |
+| --- | --- |
+| Scroll over the menu bar | Switch Spaces (up = prev, down = next) |
+| Click empty menu-bar area | Toggle Mission Control |
+| <kbd>⌘</kbd> + <kbd>Tab</kbd> | Focus (and move cursor to) the frontmost window on the next monitor |
+</details>
+
+<details>
+<summary>keyd (Linux)</summary>
+
+| Keys | Action |
+| --- | --- |
+| <kbd>Space</kbd> (tap / hold) | <kbd>Space</kbd> / arrow layer |
+| <kbd>Caps Lock</kbd> (tap / hold) | <kbd>Esc</kbd> / <kbd>Ctrl</kbd> |
+| <kbd>Esc</kbd> | <kbd>Caps Lock</kbd> |
+| <kbd>Right Alt</kbd> ⇄ <kbd>Right Ctrl</kbd> | Swapped |
+
+Arrow layer (hold <kbd>Space</kbd>): <kbd>j</kbd>/<kbd>i</kbd>/<kbd>k</kbd>/<kbd>l</kbd> → arrows · <kbd>h</kbd>/<kbd>;</kbd> → Home/End · <kbd>u</kbd>/<kbd>d</kbd> → PgUp/PgDn · <kbd>m</kbd>/<kbd>n</kbd> → Delete/Backspace
+</details>
 
 ## Contributing
 
-If you find any issues with these dotfiles or have suggestions for improvements, please feel free to open an issue or submit a pull request. Contributions are welcome!
+These are my configs. Use them as it is or stitch bits together into your own unholy creation 😉 
 
 ## License
 
-This repository is licensed under the Unlicense. See the [LICENSE](LICENSE) file for more information.
+[Unlicense](LICENSE). Do whatever you want.
