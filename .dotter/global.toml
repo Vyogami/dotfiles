@@ -71,3 +71,4 @@ depends = []
 
 [hammerspoon.files]
 "hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
+"hammerspoon/modules" = "~/.hammerspoon/modules"

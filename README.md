@@ -68,6 +68,11 @@ The `macos` profile manages `ghostty`, `karabiner` and `hammerspoon`.
 3. Grant Hammerspoon **Accessibility**, and enable *Move left/right a space* under
    System Settings → Keyboard → Keyboard Shortcuts → Mission Control.
 
+Hammerspoon is split into independent modules under `hammerspoon/modules`. Toggle
+any feature with the `features` flags at the top of `hammerspoon/init.lua`
+(scroll-to-switch-Spaces, click-for-Mission-Control, Cmd+Tab monitor focus);
+turning one off never affects the others.
+
 </details>
 
 ## Keybindings
