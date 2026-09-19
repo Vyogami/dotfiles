@@ -161,3 +161,7 @@ bindkey '^[[F' end-of-line
 
 # Set default editor to nvim
 export EDITOR=nvim
+
+
+# Added by Antigravity CLI installer
+export PATH="$HOME/.local/bin:$PATH"

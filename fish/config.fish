@@ -22,6 +22,9 @@ function nuc
    nu -c "$argv[1..-1]"
 end
 
+function magnium
+   rv $argv
+end
 
 # eza ls configurations
 alias l='eza -F --icons'
@@ -124,11 +127,11 @@ alias vi="nvim"
 # Atuin config
 # eval "$(atuin init fish)"
 
-# Created by `pipx` on 2024-04-04 23:50:45
-set PATH $PATH /home/vyogami/.local/bin
+# Local bin path
+fish_add_path $HOME/.local/bin
 
 # Mise configuartions
-mise activate fish | source
+# mise activate fish | source
 
 # Yazi configurations
 function yy
@@ -153,3 +156,18 @@ end
 
 # Set editor to nvim
 export EDITOR=nvim
+
+# Android SDK
+if test -d /opt/android-sdk
+    set -x ANDROID_HOME /opt/android-sdk
+end
+
+# Add Android tools to PATH
+# fish_add_path $ANDROID_HOME/tools
+# fish_add_path $ANDROID_HOME/platform-tools
+# fish_add_path $ANDROID_HOME/build-tools/(ls $ANDROID_HOME/build-tools | sort -V | tail -n1)
+
+# opencode
+if test -d $HOME/.opencode/bin
+    fish_add_path $HOME/.opencode/bin
+end
