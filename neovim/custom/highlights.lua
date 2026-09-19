@@ -6,14 +6,47 @@ local M = {}
 
 ---@type Base46HLGroupsList
 M.override = {
-  Comment = {
-    italic = true,
-  },
+	Comment = {
+		fg = "#76889c",
+		italic = true,
+	},
+	LineNr = {
+		fg = "#627387",
+	},
+	CursorLineNr = {
+		fg = "#ffcc66",
+		bold = true,
+	},
+	WinSeparator = {
+		fg = "#384556",
+		bg = "NONE",
+	},
+	NvimTreeWinSeparator = {
+		fg = "#384556",
+		bg = "NONE",
+	},
+	NvimTreeFolderName = {
+		fg = "#d0d7de",
+	},
+	NvimTreeFolderIcon = {
+		fg = "#e6c446",
+	},
+	NvimTreeOpenedFolderName = {
+		fg = "#95e5cb",
+		bold = true,
+	},
+	NvimTreeEmptyFolderName = {
+		fg = "#8c95a0",
+	},
+	NvimTreeIndentMarker = {
+		fg = "#384556",
+	},
+	NvDashAscii = { bg = "NONE", fg = "blue" },
+	NvDashButtons = { bg = "NONE" },
+	NotifyDEBUGBorder = { fg = "blue" },
 }
 
 ---@type HLTable
-M.add = {
-  NvimTreeOpenedFolderName = { fg = "green", bold = true },
-}
+M.add = {}
 
 return M
