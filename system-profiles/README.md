@@ -67,6 +67,35 @@ If you prefer to set it up by hand, use the manual steps below.
 
 </details>
 
+## GPU Rendering & PRIME Offload
+
+On hybrid graphics (AMD APU + NVIDIA RTX 3050), all applications (OpenGL, Vulkan, and Flatpaks) are configured to render on the discrete NVIDIA GPU by default while displaying through the compositor via PRIME.
+
+### Global Configuration (`/etc/environment`)
+Session-wide environment variables tell GLVND and Vulkan loaders to target the NVIDIA dGPU:
+```ini
+__NV_PRIME_RENDER_OFFLOAD=1
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+__VK_LAYER_NV_optimus=NVIDIA_only
+__GL_SYNC_TO_VBLANK=0
+vblank_mode=0
+```
+
+### Flatpak Sandbox Overrides
+Flatpak apps run sandboxed and do not inherit `/etc/environment`. Global overrides are applied via:
+```bash
+flatpak override --user \
+  --env=__NV_PRIME_RENDER_OFFLOAD=1 \
+  --env=__GLX_VENDOR_LIBRARY_NAME=nvidia \
+  --env=__VK_LAYER_NV_optimus=NVIDIA_only
+```
+
+### Is `gdm-prime` Required?
+**No.** `gdm-prime` was a legacy AUR patch required on older GNOME/Xorg versions to avoid GDM disabling Wayland or failing to detect secondary GPUs. 
+
+On modern GNOME Wayland (GNOME 46+ with NVIDIA 555+/615+ explicit sync), standard upstream `gdm` and `libgdm` handle hybrid graphics out of the box. PRIME offloading is handled entirely at the user-space driver level via GLVND and Vulkan layers, making display manager patches unnecessary (and potentially causing dependency conflicts).
+
 ## Customization
 
 Add custom commands to `desktop.sh` or `laptop.sh`. Scripts are executed automatically whenever Power Mode changes in Quick Settings.
+

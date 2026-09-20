@@ -68,15 +68,26 @@ EOF
 udevadm control --reload-rules 2>/dev/null || true
 echo "[+] USB autosuspend disabled (current session + permanent udev rule)."
 
-echo -e "\n=== 4. DISABLING VSYNC FOR APPS & GAMES ==="
-# Add __GL_SYNC_TO_VBLANK=0 and vblank_mode=0 to /etc/environment if not already present
-if ! grep -q "__GL_SYNC_TO_VBLANK" /etc/environment 2>/dev/null; then
-    echo "__GL_SYNC_TO_VBLANK=0" >> /etc/environment
+echo -e "\n=== 4. CONFIGURING NVIDIA PRIME RENDERING BY DEFAULT & DISABLING VSYNC ==="
+# Ensure all apps render on NVIDIA dGPU by default
+for var in "__NV_PRIME_RENDER_OFFLOAD=1" "__GLX_VENDOR_LIBRARY_NAME=nvidia" "__VK_LAYER_NV_optimus=NVIDIA_only" "__GL_SYNC_TO_VBLANK=0" "vblank_mode=0"; do
+    key="${var%%=*}"
+    if ! grep -q "^${key}=" /etc/environment 2>/dev/null; then
+        echo "$var" >> /etc/environment
+    fi
+done
+echo "[+] NVIDIA PRIME default offloading and VSYNC disabled in /etc/environment."
+
+# Apply to Flatpaks if installed
+if command -v flatpak &>/dev/null; then
+    TARGET_USER="${SUDO_USER:-$USER}"
+    sudo -u "$TARGET_USER" flatpak override --user \
+        --env=__NV_PRIME_RENDER_OFFLOAD=1 \
+        --env=__GLX_VENDOR_LIBRARY_NAME=nvidia \
+        --env=__VK_LAYER_NV_optimus=NVIDIA_only 2>/dev/null || true
+    echo "[+] Flatpak NVIDIA PRIME overrides configured for $TARGET_USER."
 fi
-if ! grep -q "vblank_mode" /etc/environment 2>/dev/null; then
-    echo "vblank_mode=0" >> /etc/environment
-fi
-echo "[+] App-level VSYNC disabled in /etc/environment (__GL_SYNC_TO_VBLANK=0, vblank_mode=0)."
+
 
 echo -e "\n=== 5. UPDATING GRUB (nvidia_drm.fbdev=1 & usbcore.autosuspend=-1) ==="
 if [ -f /etc/default/grub ]; then
