@@ -16,6 +16,7 @@ and Windows.
 - **macOS automation:** Hammerspoon (menu-bar Spaces + window tricks)
 - **Tooling & misc:** Git, Starship, Atuin, Neofetch, Tmux
 - **Desktop:** Grub, GNOME Shell (not managed by Dotter; see the [gnome-shell configs](https://github.com/legitShivam/gnome-shell-configs/blob/main/README.md))
+- **Hardware profiles:** [system-profiles](system-profiles/README.md) (syncs USB autosuspend, GPU clocks and lid behavior with GNOME Power Mode)
 
 ## Install
 

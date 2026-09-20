@@ -72,3 +72,9 @@ depends = []
 [hammerspoon.files]
 "hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
 "hammerspoon/modules" = "~/.hammerspoon/modules"
+
+[system-profiles.files]
+"system-profiles" = { target = "~/.config/system-profiles", type = "symbolic" }
+"system-profiles/systemd-user/power-profile-listener.service" = "~/.config/systemd/user/power-profile-listener.service"
+"system-profiles/systemd-user/desktop-lid-inhibit.service" = "~/.config/systemd/user/desktop-lid-inhibit.service"
+

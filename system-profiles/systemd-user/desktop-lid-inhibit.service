@@ -1,0 +1,11 @@
+[Unit]
+Description=Inhibit lid switch suspend while in Desktop Mode
+PartOf=graphical-session.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/systemd-inhibit --what=handle-lid-switch --who="Desktop Profile" --why="Desktop mode active" sleep infinity
+Restart=no
+
+[Install]
+WantedBy=default.target

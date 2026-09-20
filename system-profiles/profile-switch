@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+# ==========================================================
+# System Profile Switcher
+# Usage: profile-switch [desktop|laptop|toggle|status]
+# ==========================================================
+
+PROFILE_DIR="$HOME/.config/system-profiles"
+STATE_FILE="$PROFILE_DIR/state"
+
+# Fallback if run under sudo
+if [ -n "$SUDO_USER" ]; then
+    USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+    PROFILE_DIR="$USER_HOME/.config/system-profiles"
+    STATE_FILE="$PROFILE_DIR/state"
+fi
+
+get_state() {
+    if [ -f "$STATE_FILE" ]; then
+        cat "$STATE_FILE"
+    else
+        echo "desktop"
+    fi
+}
+
+set_state() {
+    echo "$1" > "$STATE_FILE"
+    # Ensure regular user owns the state file even when run under sudo
+    if [ -n "$SUDO_USER" ]; then
+        chown "$SUDO_USER:" "$STATE_FILE" 2>/dev/null || true
+    fi
+}
+
+notify() {
+    local title="$1"
+    local msg="$2"
+    local icon="$3"
+    if [ -n "$SUDO_USER" ]; then
+        # Send desktop notification to user session
+        sudo -u "$SUDO_USER" DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $SUDO_USER)/bus" notify-send -i "$icon" "$title" "$msg" 2>/dev/null || true
+    else
+        notify-send -i "$icon" "$title" "$msg" 2>/dev/null || true
+    fi
+}
+
+ACTION="${1:-status}"
+
+case "$ACTION" in
+    desktop)
+        bash "$PROFILE_DIR/desktop.sh"
+        set_state "desktop"
+        notify "Profile: Desktop Mode" "USB autosuspend disabled, GPU clocks boosted." "computer"
+        ;;
+    laptop)
+        bash "$PROFILE_DIR/laptop.sh"
+        set_state "laptop"
+        notify "Profile: Laptop Mode" "USB autosuspend enabled, GPU power saving active." "battery"
+        ;;
+    toggle)
+        CURRENT=$(get_state)
+        if [ "$CURRENT" = "desktop" ]; then
+            "$0" laptop
+        else
+            "$0" desktop
+        fi
+        ;;
+    status)
+        CURRENT=$(get_state)
+        echo "$CURRENT"
+        if [ "$CURRENT" = "desktop" ]; then
+            exit 0
+        else
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {desktop|laptop|toggle|status}"
+        exit 1
+        ;;
+esac

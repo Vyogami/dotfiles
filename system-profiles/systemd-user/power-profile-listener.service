@@ -1,0 +1,12 @@
+[Unit]
+Description=Sync GNOME Power Mode with System Profiles (USB autosuspend, GPU clocks)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/.config/system-profiles/power-profile-listener.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
