@@ -102,7 +102,7 @@ automation on top. Expand a section for the full mapping.
 | Input | Action |
 | --- | --- |
 | Scroll over the menu bar | Switch Spaces (up = prev, down = next) |
-| Click empty menu-bar area | Toggle Mission Control |
+| Click empty menu-bar area | Toggle Mission Control (active screen only) |
 | <kbd>⌘</kbd> + <kbd>Tab</kbd> | Focus (and move cursor to) the frontmost window on the next monitor |
 </details>
 
