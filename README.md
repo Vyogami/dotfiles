@@ -92,7 +92,8 @@ automation on top. Expand a section for the full mapping.
 | <kbd>Esc</kbd> | <kbd>Caps Lock</kbd> |
 | <kbd>⌥</kbd> tapped alone | Mission Control |
 | <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> (paste) everywhere |
-| Zen: <kbd>Ctrl</kbd> + <kbd>T</kbd>/<kbd>W</kbd>/<kbd>L</kbd>/<kbd>R</kbd>/<kbd>S</kbd>/<kbd>C</kbd>/<kbd>X</kbd>/<kbd>Z</kbd>/<kbd>1</kbd> to <kbd>0</kbd>/<kbd>-</kbd>/<kbd>=</kbd>/<kbd>,</kbd> | <kbd>⌘</kbd> + equivalent (<kbd>Ctrl</kbd> + <kbd>Tab</kbd> & <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + \* preserved) |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> (copy) everywhere except terminals and IDEs |
+| Zen: <kbd>Ctrl</kbd> + <kbd>T</kbd>/<kbd>F</kbd>/<kbd>W</kbd>/<kbd>L</kbd>/<kbd>R</kbd>/<kbd>S</kbd>/<kbd>C</kbd>/<kbd>X</kbd>/<kbd>Z</kbd>/<kbd>1</kbd> to <kbd>0</kbd>/<kbd>-</kbd>/<kbd>=</kbd>/<kbd>,</kbd> | <kbd>⌘</kbd> + equivalent (<kbd>Ctrl</kbd> + <kbd>Tab</kbd> & <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + \* preserved) |
 | External Redgear keyboard | Swaps left <kbd>⌘</kbd>/<kbd>⌥</kbd>, maps left <kbd>Ctrl</kbd> → <kbd>⌘</kbd> |
 </details>
 

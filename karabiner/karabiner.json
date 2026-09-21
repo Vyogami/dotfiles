@@ -375,6 +375,36 @@
                             {
                                 "type": "basic",
                                 "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
+                                        "optional": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^app\\.zen-browser\\.zen$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "from": {
                                     "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
@@ -1045,6 +1075,55 @@
                                 "to_if_alone": [
                                     {
                                         "apple_vendor_keyboard_key_code": "mission_control"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+C -> Cmd+C (copy) except terminals and IDEs",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_unless",
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$",
+                                            "^net\\.kovidgoyal\\.kitty$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^org\\.alacritty$",
+                                            "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.microsoft\\.VSCode$",
+                                            "^com\\.vscodium$",
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.exafunction\\.windsurf$",
+                                            "^dev\\.zed\\.Zed$",
+                                            "^com\\.apple\\.dt\\.Xcode$",
+                                            "^com\\.sublimetext\\..*",
+                                            "^com\\.jetbrains\\..*",
+                                            "^com\\.google\\.android\\.studio$"
+                                        ]
                                     }
                                 ]
                             }
